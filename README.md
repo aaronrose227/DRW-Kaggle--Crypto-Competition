@@ -44,12 +44,12 @@ bid_qty, ask_qty
 ## 4. Feature Engineering  
 Added four customizable microstructure signals to amplify order‐flow and volume imbalances:
 
-| New Feature               | Formula                                                   |
-|---------------------------|-----------------------------------------------------------|
-| volume_weighted_sell      | sell_qty × volume                                         |
-| buy_sell_ratio            | buy_qty / (sell_qty + ε)                                  |
-| selling_pressure          | sell_qty / (volume + ε)                                   |
-| effective_spread_proxy    | |buy_qty − sell_qty| / (volume + ε)                       |
+| New Feature               | Formula                                                                  |
+|---------------------------|--------------------------------------------------------------------------|
+| volume_weighted_sell      | sell_qty × volume                                                        |
+| buy_sell_ratio            | buy_qty / (sell_qty + ε)                                                 |
+| selling_pressure          | sell_qty / (volume + ε)                                                  |
+| effective_spread_proxy    | |buy_qty − sell_qty| / (volume + ε)                                      |
 
 - Replace infinities with NaN, then fill NaN → 0.  
 - Final input matrix has **24 raw + 4 engineered = 28 features**.
